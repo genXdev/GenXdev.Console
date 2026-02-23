@@ -2,7 +2,7 @@
 // Part of PowerShell module : GenXdev.Console
 // Original cmdlet filename  : Enable-Screensaver.cs
 // Original author           : René Vaessen / GenXdev
-// Version                   : 2.1.2025
+// Version                   : 2.3.2026
 // ################################################################################
 // Copyright (c)  René Vaessen / GenXdev
 //
@@ -39,8 +39,6 @@ system settings. The screensaver executable must exist at the default Windows
 System32 location.
 #>
 */
-using System;
-using System.Diagnostics;
 using System.Management.Automation;
 
 namespace GenXdev.Console

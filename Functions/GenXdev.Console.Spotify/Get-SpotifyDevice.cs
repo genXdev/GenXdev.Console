@@ -2,7 +2,7 @@
 // Part of PowerShell module : GenXdev.Console.Spotify
 // Original cmdlet filename  : Get-SpotifyDevice.cs
 // Original author           : René Vaessen / GenXdev
-// Version                   : 2.1.2025
+// Version                   : 2.3.2026
 // ################################################################################
 // Copyright (c)  René Vaessen / GenXdev
 //
@@ -21,9 +21,7 @@
 
 
 
-using System.Collections.Generic;
 using System.Management.Automation;
-using GenXdev.Helpers;
 using SpotifyAPI.Web;
 
 namespace GenXdev.Console.Spotify

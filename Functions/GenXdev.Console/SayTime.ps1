@@ -2,7 +2,7 @@
 Part of PowerShell module : GenXdev.Console
 Original cmdlet filename  : SayTime.ps1
 Original author           : René Vaessen / GenXdev
-Version                   : 2.1.2025
+Version                   : 2.3.2026
 ################################################################################
 Copyright (c)  René Vaessen / GenXdev
 
@@ -35,7 +35,9 @@ Speaks the current time, e.g. "The time is 14 hours and 30 minutes"
 function SayTime {
 
     [CmdletBinding()]
-    param()
+    param(
+        [switch] $Wait
+    )
 
     begin {
 
@@ -61,7 +63,7 @@ function SayTime {
         Microsoft.PowerShell.Utility\Write-Verbose "Speaking: $speechText"
 
         # convert the text to speech using system TTS engine
-        GenXdev.Console\Start-TextToSpeech $speechText
+        GenXdev.Console\Start-TextToSpeech $speechText -Wait:$Wait
     }
 
     end {

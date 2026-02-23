@@ -1495,12 +1495,22 @@ SayDate [<CommonParameters>]
 
 ### SYNTAX 
 ```PowerShell 
-SayTime [<CommonParameters>] 
+SayTime [-Wait] [<CommonParameters>] 
 ``` 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Wait  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
 ``` 
 ```yaml 
     <CommonParameters>  
@@ -6784,12 +6794,22 @@ SayDate [<CommonParameters>]
 
 ### SYNTAX 
 ```PowerShell 
-SayTime [<CommonParameters>] 
+SayTime [-Wait] [<CommonParameters>] 
 ``` 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Wait  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
 ``` 
 ```yaml 
     <CommonParameters>  
@@ -12064,12 +12084,22 @@ SayDate [<CommonParameters>]
 
 ### SYNTAX 
 ```PowerShell 
-SayTime [<CommonParameters>] 
+SayTime [-Wait] [<CommonParameters>] 
 ``` 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Wait  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
 ``` 
 ```yaml 
     <CommonParameters>  

@@ -2,7 +2,7 @@
 // Part of PowerShell module : GenXdev.Console
 // Original cmdlet filename  : Start-TextToSpeech.cs
 // Original author           : René Vaessen / GenXdev
-// Version                   : 2.1.2025
+// Version                   : 2.3.2026
 // ################################################################################
 // Copyright (c)  René Vaessen / GenXdev
 //
@@ -21,9 +21,7 @@
 
 
 
-using System;
 using System.Globalization;
-using System.Linq;
 using System.Management.Automation;
 
 namespace GenXdev.Console
@@ -110,6 +108,8 @@ namespace GenXdev.Console
             ValueFromRemainingArguments = false,
             ParameterSetName = "strings",
             HelpMessage = "Text to be spoken")]
+        [AllowEmptyString]
+        [AllowEmptyCollection]
         public string[] Lines { get; set; }
 
         /// <summary>
@@ -165,13 +165,13 @@ namespace GenXdev.Console
             // Iterate through each line of text for processing
             foreach (var line in Lines ?? new string[0])
             {
-                string text = line;
-
-                // Ensure non-string objects are converted to strings
-                if (!(text is string))
+                // Skip null or empty strings
+                if (string.IsNullOrEmpty(line))
                 {
-                    text = text.ToString();
+                    continue;
                 }
+
+                string text = line;
 
                 try
                 {

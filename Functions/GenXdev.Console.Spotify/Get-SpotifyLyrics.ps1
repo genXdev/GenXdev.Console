@@ -2,7 +2,7 @@
 Part of PowerShell module : GenXdev.Console.Spotify
 Original cmdlet filename  : Get-SpotifyLyrics.ps1
 Original author           : René Vaessen / GenXdev
-Version                   : 2.1.2025
+Version                   : 2.3.2026
 ################################################################################
 Copyright (c)  René Vaessen / GenXdev
 
@@ -98,7 +98,7 @@ function Get-SpotifyLyrics {
         ###############################################################################
         [Alias('m','mon')]
         [parameter(Mandatory = $false, HelpMessage = 'Target monitor for browser window')]
-        [int] $Monitor,
+        [int] $Monitor = -1,
         ###############################################################################
 
         ###############################################################################
@@ -107,10 +107,10 @@ function Get-SpotifyLyrics {
         [switch] $FullScreen,
         ###############################################################################
         [parameter(Mandatory = $false, HelpMessage = 'Width of browser window in pixels')]
-        [int] $Width,
+        [int] $Width = -1,
         ###############################################################################
         [parameter(Mandatory = $false, HelpMessage = 'Height of browser window in pixels')]
-        [int] $Height,
+        [int] $Height = -1,
         ###############################################################################
         [parameter(Mandatory = $false, HelpMessage = 'Left position of browser window')]
         [int] $Left,

@@ -2,7 +2,7 @@
 Part of PowerShell module : GenXdev.Console.Vlc
 Original cmdlet filename  : Open-VlcMediaPlayerLyrics.ps1
 Original author           : René Vaessen / GenXdev
-Version                   : 2.1.2025
+Version                   : 2.3.2026
 ################################################################################
 Copyright (c)  René Vaessen / GenXdev
 
@@ -727,7 +727,7 @@ function Open-VlcMediaPlayerLyrics {
             else {
 
                 # construct lyrics search query from vlc window title
-                $lyricsQuery = 'lyrics ' + $vlcWindow.Title
+                $lyricsQuery = 'lyrics ' + $vlcWindow.Title.Replace("- VLC media player", "")
 
                 Microsoft.PowerShell.Utility\Write-Verbose (
                     "Using VLC window title for query: ${lyricsQuery}"
